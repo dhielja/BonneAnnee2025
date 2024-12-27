@@ -1,0 +1,101 @@
+/* Style général de la page */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff6f61, #ffcc5c);
+    color: #fff;
+    overflow: hidden;
+    background-size: 400% 400%;
+    animation: gradientBG 5s ease infinite;
+}
+
+/* Animation du fond */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Conteneur central */
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol du conteneur */
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Titre principal */
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Texte secondaire */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #fefefe;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Lien vers GitHub */
+.github-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffcc5c;
+    color: #333;
+    font-weight: 600;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet au survol du lien */
+.github-link:hover {
+    background-color: #ff6f61;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation de l'ombre portée */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Application de l'animation de l'ombre */
+.github-link:focus, .github-link:hover {
+    animation: pulse 1s infinite;
+}
